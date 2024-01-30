@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Doc2" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-toc-path="Invoking REST APIs in Java" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>pom.xml File</title>
+        <!-- <script src="../Javascript/scripts.js">
+        </script>
+        <script src="../Javascript/bookmarks.js">
+        </script>
+        <script src="../Javascript/insight.js">
+        </script>
+        <script src="../../../../../../js/infinityscript.js">
+        </script>
+        <link href="../../../../../../css/offline.css" rel="stylesheet" type="text/css" /> -->
+        <!--Kony header for portal start -->
+        <!--Prettify code start -->
+        <!--Prettify code end -->
+        <!-- Google Analytics Tracking Code for docs.kony.com -->
+        <!-- Hotjar Tracking Code for docs.kony.com -->
+        <!-- copy to cliboard Dhanush Start-->
+        <!-- copy to cliboard Dhanush End-->
+        <!--Kony header for portal end -->
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="Resources/Stylesheets/Doc02.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.separator-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.previous-topic-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.filler-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.next-topic-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <style>
+   
+.feedbackBox{
+    position: absolute;
+    bottom: 0px;
+    right: 40px;
+    width: 150px;
+    height: 40px;
+    background-color: #003e75;
+    text-align: center;
+    padding: 10px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    cursor: pointer;
+}
+
+#contact{
+    color: #fff;
+}
+a.selected {
+  color:white;
+  z-index:100;
+}
+
+.messagepop {
+  background-color:#FFFFFF;
+  border:1px solid #f39200;
+  cursor:default;
+  display:none; 
+  margin-top: 15px;
+  position:absolute;
+  text-align:left;
+  z-index:1001;
+  padding: 0px 0px 0px;
+  right: 40px;
+  bottom: 0;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom: solid 10px #f39200;
+  height:610px;
+  width:420px;
+  z-index: 9999;
+  
+
+}
+
+.closebtn {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    top: 5px;
+    position: absolute;
+    right: 15px;
+}
+
+.messagepopheading{
+    padding: 15px;
+    background: #f39200;
+    color: white;
+    text-align: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    font-weight: 700;
+}
+
+.feedbackpop {
+    height: 560px;
+    width: 420px;
+    border: none;
+}
+
+
+@media (min-width: 360px) and (max-width: 640px){
+.messagepop{
+    width: 310px;
+    }
+
+.feedbackpop {
+    height: 560px;
+    width: 310px;
+    border: none;
+}
+}
+
+
+body.dark-mode {
+  background-color: #201f1f;
+  color: #fff;
+}
+body.dark-mode a {
+  color: #000;
+}
+body.dark-mode button {
+  background-color: #201f1f;
+  color: #000;
+}
+
+body.dark-mode .sidenav-wrapper {
+    background-color: #2d2c2c;
+    border-right: 1px solid white;
+}
+
+body.dark-mode .TableStyle-TemenosTables {
+color:#000;
+}
+
+body.dark-mode nav.title-bar {
+    background-color: #2d2c2c;
+    border-bottom: 1px solid white;
+}
+
+body.dark-mode h1 {
+    color:#f39200;
+}
+
+body.dark-mode h2 {
+    color:#f39200;
+}
+
+body.dark-mode .TableStyle-TemenosTables-Body-Body1{
+color:white;
+}
+
+body.dark-mode .TableStyle-TemenosTables-BodyB-Column1-Body1{
+background:black;
+border: 1px solid #a4acb1;
+}
+
+body.dark-mode .TableStyle-TemenosTables-BodyA-Column1-Body1{
+background:black;
+border: 1px solid #a4acb1;
+}
+
+body.dark-mode .TableStyle-TemenosTables-BodyC-Column1-Body1{
+background:black;
+border: 1px solid #a4acb1;
+}
+
+body.dark-mode .TableStyle-TemenosTables-BodyD-Column1-Body1{
+background:black;
+border: 1px solid #a4acb1;
+}
+
+body.dark-mode .TableStyle-TemenosTables-BodyE-Column1-Body1{
+background:black;
+border: 1px solid #a4acb1;
+}
+
+body.dark-mode .TableStyle-TemenosTables-HeadD-Column1-Header1{
+background:#4F575C;
+}
+
+body.dark-mode .TableStyle-TemenosTables-HeadE-Column1-Header1{
+background:#4F575C;
+}
+
+body.dark-mode .TableStyle-TemenosTables-Body-Body1{
+color:white;
+border:1px solid #a4acb1;
+}
+
+body.dark-mode ul.menu._Skins_SideMenuNT.mc-component {
+    background-color: #201f1f;
+}
+
+body.dark-mode ul.menu._Skins_SideMenuNT.mc-component a {
+    background: #201f1f !important;
+}
+
+body.dark-mode .title-bar-layout a.logo {
+background: transparent url('https://docs.temenos.com/classimax/images/flareimages/darktemenoslogo.png') no-repeat center center !important;
+}
+
+@media only screen and (max-device-width: 767px){
+body.dark-mode .title-bar-layout a.logo {
+    width: 120px;
+    height: 30px;
+    align-self: center;
+    background: transparent url('https://docs.temenos.com/classimax/images/flareimages/temenosdarkmobile.png') no-repeat center center !important;
+    }
+ }
+
+
+@media only screen and (max-device-width: 1278px){
+body.dark-mode .title-bar-layout a.logo {
+    top: 0;
+    margin: 0;
+    display: block;
+    width: 150px;
+    height: 37px;
+    align-self: center;
+    background: transparent url('https://docs.temenos.com/classimax/images/flareimages/temenosdarktab.png') no-repeat center center !important;
+}
+}
+
+body.light-mode {
+  background-color: #fff;
+  color: #000;
+}
+body.light-mode a {
+  
+}
+body.light-mode button {
+  background-color: #000;
+  color: #eee;
+}
+
+
+.urlDiv{
+    margin: 10px 0px 30px 0px;
+    background: #e4e4e4;
+    padding: 1rem !important;
+}
+
+#bookmarkbarURL{
+        word-break: break-all;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+  z-index:9999;
+}
+.modalbookmark .popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    margin-top: 250px;
+}
+.modalbookmark .popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.modalbookmark .popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+
+.modalbookmark a.close-modal {
+    position: absolute;
+    top: 2.5px;
+    right: 1.5px;
+}
+
+.modalbookmark{
+    height: 500px;
+    overflow: hidden;
+    display:none;
+}
+
+
+
+#favorite-links li {
+  padding:10px;
+  border-bottom: 1px solid #ccc;
+ 
+}
+
+#favorite-links li:last-child {
+  border:none;
+}
+
+#favorite-links a {
+  color: #003e75;
+}
+
+#favorite-links li:hover {
+  background: #ccc;
+}
+
+small#url {
+    word-break: break-all;
+}
+
+
+.bookmarkTitle{
+      text-align: center;
+    font-family: Arial;
+    text-align: left;
+    mc-heading-level: 2;
+    margin: 0.75em;
+    margin-bottom: 4px;
+    margin-left: 0pt;
+    margin-right: 0pt;
+    margin-top: 20px;
+    text-transform: none;
+    page-break-before: always;
+    color: #003e75;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: center;
+}
+
+
+.logbutton{
+  color: #ffffff;
+  background-color: #003e75 !important;
+  border-color: #003e75 !important;
+  width: 120px;
+  padding: 4px;
+  margin: 10px 0px 0px 4px;
+}
+
+.logcancel{
+background-color: #767676 !important;
+color: #fefefe !important;
+width: 120px;
+padding: 4px;
+margin: 10px 0px 0px 14px;
+}
+
+.logOffBtnModal a.close-modal {
+    position: absolute;
+    top: 2.5px;
+    right: 1.5px;
+}
+
+    </style>
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js">
+        </script>
+        <script type="text/javascript" src="Resources/prettify/prettify.js">
+        </script>
+        <script type="text/javascript">/* <![CDATA[ */
+				window.onload = function(){
+				prettyPrint();
+				};
+			/* ]]> */</script>
+        <script>/* <![CDATA[ */
+				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+				ga('create', 'UA-92409512-1', 'auto');
+				ga('send', 'pageview');
+			/* ]]> */</script>
+        <script>/* <![CDATA[ */
+				(function(h,o,t,j,a,r){
+				h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+				h._hjSettings={hjid:750442,hjsv:6};
+				a=o.getElementsByTagName('head')[0];
+				r=o.createElement('script');r.async=1;
+				r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+				a.appendChild(r);
+				})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+			/* ]]> */</script>
+        <script>/* <![CDATA[ */
+			function copyFunction(codeText, button)
+			{
+			const copyText = codeText;
+			const textArea = document.createElement('textarea');
+			textArea.textContent = copyText;
+			document.body.append(textArea);
+			textArea.select();
+			document.execCommand("copy");
+			document.body.removeChild(textArea);
+			button.value = "Copied";
+			button.className = "btnOnClick";
+			window.setTimeout(function(){ button.value = "Copy"; button.className = "btn"},2000);
+			}
+			/* ]]> */</script>
+    </head>
+    <body id="body" class="">
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-left" role="navigation" id="offCanvas" data-off-canvas="" data-position="left" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" role="banner" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="https://basecamp.temenos.com/s/quantum-documentation?index=0" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="1" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <script>/* <![CDATA[ */
+
+function showBot(){
+	console.log("Hi, in bot");
+	 if($("#chat-box").length){
+           maximizeBot();
+        }else{
+$("body").append(`<div id="chat-box"><div id="chat-ctrl"><div class="minimizeBot" style="" id="" onclick="minimizeBot();"><img src="Resources/Images/Assets/minimize.svg" style="width:16px;" /></div><div class="closeBot" style="" id="" onclick="removeBot();"><img src="Resources/Images/Assets/close.svg" style="width:16px;" /></div><a onclick="minimizeBot();"><i class="fas fa-window-minimize" /></a><a onclick="removeBot();"><i class="fas fa-times" /></a></div><iframe width="100%" height="100%" src="https://docsbot.azurewebsites.net/" allow="microphone;" frameborder="0" /></div>`);	
+
+}}
+
+function removeBot(){
+	$("#chat-box").remove();
+}
+function minimizeBot(){
+	$("#chat-box").css("height","0");
+	$("body").append(`<div id="chat-max-icon" onclick="maximizeBot();"><a><img src="Resources/Images/Assets/activechat.svg" style="width:25px;" /></a><div>Active</div></div>`);
+}
+function maximizeBot(){
+	$("#chat-box").css("height","64vh");
+	$("#chat-max-icon").remove();
+	
+}
+
+$(document).ready(function(){
+  $(".nav-search");
+
+});
+
+
+
+
+/* ]]> */</script>
+                                    <div class="div_wrapper">
+                                        <img src="Resources/prettify/onLoad.png" onload="prettyPrint();" />
+                                        <div class="topictoolbar">
+                                            <div class="buttons popup-container clearfix topicToolbarProxy _Skins_TopicToolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                                <div class="button-group-container-left">
+                                                    <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                                        <div>
+                                                            <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                                <div class="button-icon"> </div>
+                                                            </div>
+                                                        </div>
+                                                    </button>
+                                                    <div class="button-separator">
+                                                    </div>
+                                                    <button class="button needs-pie previous-topic-button" title="Navigate previous" disabled="true">
+                                                        <div>
+                                                            <div role="img" class="button-icon-wrapper" aria-label="Navigate previous">
+                                                                <div class="button-icon"> </div>
+                                                            </div>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                                <div class="button-group-container-right">
+                                                    <button class="button needs-pie next-topic-button" title="Navigate next" disabled="true">
+                                                        <div>
+                                                            <div role="img" class="button-icon-wrapper" aria-label="Navigate next">
+                                                                <div class="button-icon"> </div>
+                                                            </div>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="first_div" id="first_div">
+                                            <div style="max-width: 85%; overflow-x: auto;">
+                                                <div style="max-width: 95%" role="main" id="mc-main-content">
+                                                    <h1 id="pomxmlFile" data-magellan-target="pomxmlFile">pom.xml File</h1><pre class="prettyprint" xml:space="preserve"><input type="button" id="button" class="btn" style="float: right;" value="Copy" onClick="var codeSnippet = this.parentNode.textContent; copyFunction(codeSnippet, this);" />
+&lt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"&gt;
+  &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+  &lt;groupId&gt;kms-api-examples&lt;/groupId&gt;
+  &lt;artifactId&gt;kms-api-examples&lt;/artifactId&gt;
+  &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
+  &lt;dependencies&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;org.apache.httpcomponents&lt;/groupId&gt;
+			&lt;artifactId&gt;httpclient&lt;/artifactId&gt;
+			&lt;version&gt;4.3.2&lt;/version&gt;
+			&lt;type&gt;jar&lt;/type&gt;
+			&lt;scope&gt;compile&lt;/scope&gt;
+		&lt;/dependency&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;org.apache.httpcomponents&lt;/groupId&gt;
+			&lt;artifactId&gt;httpclient-cache&lt;/artifactId&gt;
+			&lt;version&gt;4.3.2&lt;/version&gt;
+			&lt;type&gt;jar&lt;/type&gt;
+			&lt;scope&gt;compile&lt;/scope&gt;
+		&lt;/dependency&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;org.apache.httpcomponents&lt;/groupId&gt;
+			&lt;artifactId&gt;httpmime&lt;/artifactId&gt;
+			&lt;version&gt;4.3.2&lt;/version&gt;
+			&lt;type&gt;jar&lt;/type&gt;
+			&lt;scope&gt;compile&lt;/scope&gt;
+		&lt;/dependency&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;com.fasterxml.jackson.core&lt;/groupId&gt;
+			&lt;artifactId&gt;jackson-core&lt;/artifactId&gt;
+			&lt;version&gt;2.4.0&lt;/version&gt;
+		&lt;/dependency&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;com.fasterxml.jackson.core&lt;/groupId&gt;
+			&lt;artifactId&gt;jackson-databind&lt;/artifactId&gt;
+			&lt;version&gt;2.4.0&lt;/version&gt;
+		&lt;/dependency&gt;
+	&lt;/dependencies&gt;
+  &lt;build&gt;
+    &lt;plugins&gt;
+      &lt;plugin&gt;
+        &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
+        &lt;version&gt;3.5.1&lt;/version&gt;
+        &lt;configuration&gt;
+          &lt;source&gt;1.7&lt;/source&gt;
+          &lt;target&gt;1.7&lt;/target&gt;
+        &lt;/configuration&gt;
+      &lt;/plugin&gt;
+    &lt;/plugins&gt;
+  &lt;/build&gt;
+&lt;/project&gt;</pre>
+                                                </div>
+                                            </div>
+                                            <div style="left: 75%; max-width: 20%; max-height: 70%; position: fixed; top: 150px; overflow: auto;">
+                                                <p><b>In this topic</b>
+                                                </p>
+                                                <div data-sticky-container="" id="qqNY_YGb5U-kqwlqy6p-Pw">
+                                                    <div class="sticky sticky-menu" style="width:100%" data-sticky="" data-top-anchor="qqNY_YGb5U-kqwlqy6p-Pw:top" data-bottom-anchor="contentBody:bottom" data-scroll-container=".body-container" data-sticky-on="small" data-scroll-container-on="only screen and (min-width: 1280px)">
+                                                        <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuSkin mc-component">
+                                                            <li><a href="#pomxmlFile">pom.xml File</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Modal HTML embedded directly into document -->
+                                            <div id="ex1" class="modalbookmark">
+                                                <div class="grid-x grid-padding-x">
+                                                    <div class="large-12 cell">
+                                                        <div id="container">
+                                                            <div id="header">
+                                                                <center>
+                                                                    <p class="bookmarkTitle">
+      Add Bookmark
+    </p><small>save your best links</small>
+                                                                </center>
+                                                            </div>
+                                                            <br />
+                                                            <form id="add-link-form">
+                                                                <label>Bookmark Name</label>
+                                                                <br />
+                                                                <input id="bookmarkname" type="text" placeholder="Enter bookmark name" autocomplete="off" />
+                                                                <br />
+                                                                <label>Bookmark URL</label>
+                                                                <div class="urlDiv callout"><small id="url"></small>
+                                                                </div>
+                                                                <button type="submit" id="add" class="primary button" style="width:93%;">Save Link</button>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- <a href="#" rel="modal:close">Close</a> -->
+                                                <p id="demo" />
+                                            </div>
+                                            <div id="viewbookmark" class="modalbookmark">
+                                                <div class="grid-x grid-padding-x">
+                                                    <div class="large-12 cell">
+                                                        <div id="container">
+                                                            <div id="header">
+                                                                <center>
+                                                                    <p class="bookmarkTitle">
+      View Bookmarks
+    </p><small>Visit your best links</small>
+                                                                </center>
+                                                            </div>
+                                                            <div id="content">
+                                                                <ul>
+                                                                </ul>
+                                                                <input id="searchBookmark" type="text" placeholder="Search bookmarks" style="height: 31px;" />
+                                                                <div class="bookmarkContainer">
+                                                                    <table id="bookmarkTables">
+                                                                        <tr>
+                                                                            <th style="color:black">Bookmark Name</th>
+                                                                            <th style="color:black">Actions</th>
+                                                                        </tr>
+                                                                        <tbody id="favorite-links" />
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- <a href="#" rel="modal:close">Close</a> -->
+                                            </div>
+                                            <!-- <div class="grid-x grid-padding-x">
+                <div class="large-12 cell footercontent">
+                Footer text
+                </div>
+            </div>  -->
+                                            <!-- <div id="bookmarksResults"></div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
