@@ -1,28 +1,16 @@
 pipeline {
     agent any 
     
-    tools {node 'nodejs'}
-    
     stages {
-        stage ('git clone'){
+        stage("code checkout"){
             steps {
-                git branch: 'main', url: 'https://github.com/Thangarajindxx/pom.git'
+                git branch: 'main', credentialsId: '3b3aa6cf-5093-4ac2-9199-1d4905b2b259', url: 'https://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@github.com/Thangarajindxx/Indxx-Operation.git'
             }
         }
-        stage ('maven build'){
-            steps {
-                sh 'mvn clean install'
-            }
-        }
-        stage ('test'){
-            steps {
-                echo "code test completed"
-            }
-        }
-        stage ('code deploy'){
-            steps {
-                echo"code deploy in progress"
-            }
+    }
+    post {
+        always {
+            emailext body: 'summery success', subject: 'pipeline check', to: 'thangarajvelcloud1718@gmail.com'
         }
     }
 }
