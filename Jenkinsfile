@@ -1,7 +1,7 @@
 pipeline {
     agent any 
     tools {
-        maven 'maven'
+        maven 'local_maven'
         jdk 'OpenJDK'
         // Add other tools as necessary
     }
