@@ -1,8 +1,9 @@
 pipeline {
     agent any 
     tools {
-        maven 'Maven'
-        jdk 'JDK'// Adjust this if the Maven installation name is different
+        maven 'maven'
+        jdk 'OpenJDK'
+        // Add other tools as necessary
     }
     stages {
         stage ('Build') {
