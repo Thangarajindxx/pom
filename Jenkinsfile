@@ -1,7 +1,8 @@
 pipeline {
     agent any 
     tools {
-        maven 'local_maven' // Adjust this if the Maven installation name is different
+        maven 'Maven'
+        jdk 'JDK'// Adjust this if the Maven installation name is different
     }
     stages {
         stage ('Build') {
