@@ -1,23 +1,25 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+                             http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
+    <groupId>org.talend.cxf-examples.dev-guide-wsdl-first</groupId>
     <artifactId>dev-guide-wsdl-first-war</artifactId>
+    <version>1.0.0</version>
     <name>-- Service WAR file</name>
     <packaging>war</packaging>
     <url>http://maven.apache.org</url>
 
-    <parent>
-        <groupId>org.talend.cxf-examples.dev-guide-wsdl-first</groupId>
-        <artifactId>dev-guide-wsdl-first</artifactId>
-        <version></version>
-    </parent>
+    <properties>
+        <spring.version>YOUR_SPRING_VERSION_HERE</spring.version>
+    </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.talend.cxf-examples.dev-guide-wsdl-first</groupId>
             <artifactId>dev-guide-wsdl-first-service</artifactId>
-            <version></version>
+            <version>YOUR_SERVICE_VERSION_HERE</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
@@ -29,12 +31,13 @@
     <build>
         <plugins>
             <plugin>
-               <groupId>org.apache.tomcat.maven</groupId>
-               <artifactId>tomcat7-maven-plugin</artifactId>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
             </plugin>
             <plugin>
                 <artifactId>maven-war-plugin</artifactId>
-                <version>2.1.1</version>
+                <version>3.2.3</version>
                 <configuration>
                     <webXml>src/main/webapp/WEB-INF/web.xml</webXml>
                     <webResources>
